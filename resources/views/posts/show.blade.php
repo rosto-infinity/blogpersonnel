@@ -3,8 +3,8 @@
 @section('title', $post['title'] . ' - Mon Blog')
 
 @section('content')
-    <article>
-        <h1>{{ $post['title'] }}</h1>
+    <article style="border: 1px solid #ddd; padding: 1rem; margin: 1rem 0;">
+        <h1 style="color: green" >{{ $post['title'] }}</h1>
         <p class="meta">
             Par <strong>{{ $post['author'] }}</strong>
             le <time>{{ $post['date'] }}</time>
@@ -12,9 +12,11 @@
         <div class="content">
             {!! $post['content'] !!}
         </div>
-    </article>
 
+     
+    </article>
     <nav>
-        <a href="{{ route('home') }}">← Retour aux articles</a>
+        <a href="{{ route('home') }}" style="color: green">← Retour aux articles</a>
     </nav>
+
 @endsection

@@ -11,7 +11,7 @@
 
         @forelse ($posts as $post)
             <article style="border: 1px solid #ddd; padding: 1rem; margin: 1rem 0;">
-                <h3>{{ $post['title'] }}</h3>
+                <h3 style="color: green">{{ $post['title'] }}</h3>
                 <p class="meta">Par {{ $post['author'] }} - {{ $post['date'] }}</p>
                 <p>{{ $post['excerpt'] }}</p>
                 <a href="{{ route('posts.show', ['slug' => $post['slug']]) }}">Lire la suite →</a>

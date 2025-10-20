@@ -13,6 +13,7 @@
             body {
                 font-family: Arial, sans-serif;
                 line-height: 1.6;
+                max-height: 100vh;
             }
             header {
                 background: #333;
@@ -49,7 +50,7 @@
             </nav>
         </header>
 
-        <main>
+        <main style="  min-height: 78vh;">
             @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>
