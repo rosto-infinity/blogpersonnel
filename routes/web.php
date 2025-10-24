@@ -70,7 +70,15 @@ Route::get('/posts/{slug}', function ($slug) use ($posts) {
     return view('posts.show', ['post' => $post]);
 })->name('posts.show');
 
+// Un seul paramètre
+Route::get('/users/{user_id}/articles/{articles_id}', function ($user_id, $articles_id=null) {
+    return "Article numéro : $articles_id de l'utilisateur $user_id";
+});
+Route::get('/hello', function(){
+    return 'Hello World !';
+});
 // Route générique EN DERNIER
 Route::get('/', function () use ($posts) {
     return view('home', ['posts' => $posts]);
 })->name('home');
+

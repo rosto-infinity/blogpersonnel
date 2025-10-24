@@ -10,7 +10,7 @@
 
         <div>
             <label for="name">Nom :</label>
-            <input type="text" name="name" id="name" required>
+            <input type="text" name="name" id="name" >
             @error('name')
                 <span class="error">{{ $message }}</span>
             @enderror
@@ -18,7 +18,7 @@
 
         <div>
             <label for="email">Email :</label>
-            <input type="email" name="email" id="email" required>
+            <input type="email" name="email" id="email" >
             @error('email')
                 <span class="error">{{ $message }}</span>
             @enderror
@@ -26,7 +26,7 @@
 
         <div>
             <label for="message">Message :</label>
-            <textarea name="message" id="message" rows="5" required></textarea>
+            <textarea name="message" id="message" rows="5" ></textarea>
             @error('message')
                 <span class="error">{{ $message }}</span>
             @enderror
