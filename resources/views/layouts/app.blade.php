@@ -47,6 +47,7 @@
                 <a href="{{ route('home') }}">Accueil</a>
                 <a href="{{ route('about') }}">À propos</a>
                 <a href="{{ route('contact') }}">Contact</a>
+                <a href="{{ route('products.index') }}">Products</a>
             </nav>
         </header>
 

@@ -2,6 +2,50 @@
 
 use Illuminate\Support\Facades\Route;
 
+
+use App\Http\Controllers\ProductController;
+
+
+// Route pour afficher la liste de tous les produits (READ - Index)
+Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+
+// Route pour afficher le formulaire de création de produit (CREATE - Form)
+Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
+
+// Route pour stocker un nouveau produit (CREATE - Store)
+Route::post('/products', [ProductController::class, 'store'])->name('products.store');
+
+// Route pour afficher un produit spécifique (READ - Show)
+Route::get('/products/{product}', [ProductController::class, 'show'])->name('products.show');
+
+// Route pour afficher le formulaire d'édition d'un produit (UPDATE - Form)
+Route::get('/products/{product}/edit', [ProductController::class, 'edit'])->name('products.edit');
+
+// Route pour mettre à jour un produit spécifique (UPDATE - Update)
+Route::patch('/products/{product}', [ProductController::class, 'update'])->name('products.update');
+
+// Route pour supprimer un produit spécifique (DELETE - Destroy)
+Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('products.destroy');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Créer des données de test avec nos contributeurs
 $posts = [
     [
