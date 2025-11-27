@@ -4,7 +4,9 @@ use Illuminate\Support\Facades\Route;
 
 
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CategoryController;
 
+Route::resource('categories', CategoryController::class);
 
 // Route pour afficher la liste de tous les produits (READ - Index)
 Route::get('/products', [ProductController::class, 'index'])->name('products.index');
@@ -26,6 +28,7 @@ Route::patch('/products/{product}', [ProductController::class, 'update'])->name(
 
 // Route pour supprimer un produit spécifique (DELETE - Destroy)
 Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('products.destroy');
+
 
 
 

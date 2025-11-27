@@ -9,6 +9,10 @@
             <strong class="block text-gray-700">Description :</strong>
             <p class="text-gray-800">{{ $product->description }}</p>
         </div>
+        <div class="mb-4">
+            <strong class="block text-gray-700">Categorie :</strong>
+            <p class="text-gray-800">{{ $product->category->name }}</p>
+        </div>
 
         <div class="mb-4">
             <strong class="block text-gray-700">Prix :</strong>
